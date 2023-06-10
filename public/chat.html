@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="instantChat">
+        <header class="head">
+            <div class="title">
+                <h1 class="titlept1">
+                    Instant
+                </h1>
+                <h1 class="titlept2">
+                    Chat
+                </h1>
+            </div>
+            <div class="navbar">
+                <div class="navbarIcon">
+                    <div class="Iconchat">
+                        <i class="fa-regular fa-message"><a href="index.html"></a></i>
+                    </div>
+                    <div class="Icon">
+                        <i class="fa-solid fa-user"><a href=""></a></i>
+                    </div>
+                    <div class="Icon">
+                        <i class="fa-solid fa-gear"><a href=""></a></i>
+                    </div>
+                    <div class="Icon">
+                        <button id="dark">
+                            <i id="NightMode" class="fa-solid fa-moon"></i>
+                            <i id="DayMode" class="fa-sharp fa-solid fa-sun"></i>
+                        </button>
+
+                    </div>
+                    <div class="separate1"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="sct1">
+                <div class="room" id="room">
+                    <h1 class="choosedIcon">
+                        Chat users
+                    </h1>
+                    <ul id="users"></ul>
+                    <div class="separate2"></div>
+                    <div class="aboutRoom">
+                        <h1>
+                            About room
+                        </h1>
+                    </div>
+                    <div class="Iconplus" id="Iconplus">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </section>
+            <section class="sct2">
+                <div class="chat">
+                    <div id="myRoom">
+                        <button id="miniBye">&#128075;&#127996;</button>
+                        <h1 id="roomValue1"></h1> 
+
+                        <button id="littledark">
+                            <i id="miniNightMode" class="fa-solid fa-moon"></i>
+                            <i id="miniDayMode" class="fa-sharp fa-solid fa-sun"></i>
+                        </button>
+
+                    </div>
+                    <div class="messages" id="mp">
+
+                    </div>
+                    <div class="yourMessage">
+
+                        <div class="sendEmojis">
+                            <button class="emoji"> <i class="fa-solid fa-icons"></i></button>
+                        </div>
+                        <form id="msgForm">
+                            <input type="text" class="inputMessage" id="sendMsg" placeholder="write message here.."
+                                required autocomplete="off">
+                            <button class="sendBtn" id="sendBtn">
+                                <p>Send</p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sct3" >
+                <div class="roomDesc" id="roomDesc">
+                    <h1>Your room</h1>
+                    <div class="separate3"></div>
+                    <h1 id="roomValue2"></h1>
+                    <h3 id="welcomeRoom"> Welcome to <h3 id="roomValue3"></h3></h3> 
+                    <h3>   ,you can discuss whatever you want with all users in this room, enjoy it 😉</h3>
+                </div>
+                <button id="Bye">Leave&#128075;&#127996;</button>
+            </section>
+        </main>
+
+        <div id="blackBody">
+            <div id="newRoomForm" class="createRoom">
+                <form>
+                    <div class="roomForm" id="roomForm">
+                        <h1>Name :</h1>
+                        <input type="text" id="roomName">
+                        <h1>About :</h1>
+                        <input type="text" id="aboutIt">
+                    </div>
+                </form>
+                <div class="btnToCreate" id="btnToCreate">
+                    <button class="createNewRoom">
+                        <p>Create</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <audio src="Son de notif/Tin.mp3" id="audio"></audio>
+    </div>
+    <script src="emoji.js"></script>
+    <script src=" emj.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.2/qs.min.js"
+        integrity="sha512-vCegEXqPUYpZsTGz2lk0jaQ1psxtFeniVJACAXhMVxuoYa/N4nZkjoVFOxLwP7uGeQOoemiz7DQrIpRTj4IBPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/chat.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+</body>
+
+</html>
